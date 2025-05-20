@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday, Riko!</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #444;
+      padding: 30px;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fff0f5;
+      padding: 20px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 192, 203, 0.5);
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      text-align: center;
+      color: #ff99cc;
+    }
+    .gif {
+      display: block;
+      margin: 20px auto;
+      max-width: 150px;
+      border-radius: 12px;
+    }
+    .signature {
+      text-align: right;
+      margin-top: 40px;
+      color: #cc6699;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #ffb6c1;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      color: #fff;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff99cc;
+    }
+    .hidden {
+      display: none;
+    }
+    .sparkle {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: pink;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 999;
+      animation: sparkleAnim 1s ease-out forwards;
+    }
+    @keyframes sparkleAnim {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(3); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>dear riko,</h1>
+    <img class="gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTZ6M2ppMWlnNXY5M3BtOXA2c3IzdXd2cTBuNHVmczZ6a2duZ3E3ZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7TKRB4FkPzPVQY4g/giphy.gif" alt="cute bunny gif"><div id="letter-part-1">
+  <p>hi hi. i hope this little letter feels like a warm hug and not a disturbance. i promise i’m not here to stir anything or bring any heaviness—i just really, truly wanted to greet you the happiest birthday ever.</p>
+  <p>i know i’ve made mistakes. i know i may not be the kind of friend you deserve. and maybe there’s still a part of you that feels hurt because of me and that’s okay. you don’t have to rush yourself or forgive me if you’re not ready. your feelings are valid. you’re allowed to feel them, completely and without question.</p>
+  <button onclick="showNextPart('letter-part-1', 'letter-part-2')">click me gently</button>
+</div>
+
+<div id="letter-part-2" class="hidden">
+  <p>but even with all that said, i just couldn’t let your birthday pass without saying something (there are things i’ve been carrying in my heart that i just want you to know). because riko... thank you. thank you for everything. for being part of my life, even if it was only for a chapter, it was a chapter that mattered a lot. being your friend was one of the most special, comforting, and joy-filled things i’ve ever experienced. thank you for laughing with me, listening to me, and just existing next to me in this strange little world. meeting you was such a magical thing. you might not even realize it, but you were one of the brightest parts of my life.. and i miss it. i miss you.</p>
+  <p>thank you for making me laugh during days when i didn’t even want to wake up. thank you for staying, even when i wasn’t at my best. you don’t know this, but you were one of the reasons i made it through. you were one of the reasons i’m still here. you reminded me that life could still be soft and beautiful. you made me want to try again. to live again. and that means more than words could ever say.</p>
+  <button onclick="showNextPart('letter-part-2', 'letter-part-3')">click again, please</button>
+</div>
+
+<div id="letter-part-3" class="hidden">
+  <p>i’m so proud of you. you’re no longer bending yourself just to please everyone—and that makes me so happy. you’re choosing your peace, and i hope it leads you somewhere full of warmth and sunshine and quiet happiness. you’ve always deserved that kind of life, riko. you really have.</p>
+  <p>and if ever, one day, the world starts to feel too loud again—if you ever feel like you’ve run out of people who are on your side—please know that i’m still here. quietly. always rooting for you from afar. you still have me. and even if we're not close anymore, you’ll always have a soft place to return to with me. no questions asked.</p>
+  <p>i regret what i did. so much. it was just one joke—but it hurt you, and i didn’t mean for that to happen. if i could turn back time, i would. i would’ve chosen my words better. i would’ve protected your heart instead of carelessly breaking it. i’m so sorry, riko. i never wanted to hurt you—not even for a second.</p>
+  <p>i still love you. as a friend, as a person who once knew your laughter and your quiet thoughts and your kindness. i’ll always treasure that. and i’ll always be here—silent, steady, and ready to welcome you back, if ever that day comes.</p>
+  <p>happy birthday, riko. may this new year of your life be kind, magical, and full of love you don’t have to question.</p>
+  <img class="gif" src="https://media.giphy.com/media/xUOwGoNa13La5btUre/giphy.gif" alt="my melody gif">
+  <p class="signature">with all the love my heart can hold,<br>nyca lynne.</p>
+</div>
+
+  </div>  <script>
+    function showNextPart(currentId, nextId) {
+      document.getElementById(currentId).classList.add('hidden');
+      document.getElementById(nextId).classList.remove('hidden');
+    }
+
+    document.addEventListener('mousemove', function(e) {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = e.pageX + 'px';
+      sparkle.style.top = e.pageY + 'px';
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 1000);
+    });
+  </script></body>
+  </html>
