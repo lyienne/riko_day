@@ -2,114 +2,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>happy birthday, riko!</title>
+  <title>Happy Birthday, Riko!</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
-      background-color: #ffd9ec;
-      background-image: url('https://i.pinimg.com/originals/3a/e0/b6/3ae0b670d2bfb6b6fd92dd33a21938c5.jpg');
-      background-size: cover;
-      color: #4d2c3d;
-      overflow: hidden;
+      background: url('https://www.transparenttextures.com/patterns/bedge-grunge.png') repeat, #ffe4f0;
+      color: #6b4c5b;
+      overflow-x: hidden;
+      cursor: url('https://cur.cursors-4u.net/nature/nat-11/nat1010.cur'), auto;
     }.container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-.letter-box {
-  background: #fff0f6;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  width: 90%;
   max-width: 600px;
-  max-height: 70vh;
-  overflow-y: auto;
-  padding: 2rem;
-  display: none;
-  flex-direction: column;
-  gap: 1.5rem;
-  transition: all 0.5s ease;
-  scroll-behavior: smooth;
-}
-
-.letter-box.show {
-  display: flex;
-  animation: fadeIn 1s ease forwards;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
 }
 
 .btn {
-  background-color: #ffb6d5;
+  background-color: #ffb6c1;
   border: none;
-  border-radius: 30px;
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
-  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease;
-  margin-top: 1rem;
+  margin-bottom: 20px;
 }
 
 .btn:hover {
-  background-color: #ffa8cd;
+  background-color: #ff9bb2;
 }
 
-.melody {
+#letter {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.5s ease-in-out;
+  white-space: pre-line;
+  line-height: 1.8;
+}
+
+#letter.show {
+  max-height: 1000vh;
+}
+
+.my-melody {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 100px;
+  top: -40px;
+  right: -30px;
+  width: 120px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+.typing {
+  border-right: .15em solid #ff6b9e;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(60, end) forwards;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #fcbfdc;
-  border-radius: 3px;
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
   </style>
 </head>
 <body>
   <div class="container">
-    <button class="btn" onclick="revealLetter()">open letter</button>
-    <div class="letter-box" id="letter">
-      <p>dear riko,</p>
-      <p>hi hi. i hope this little letter feels like a warm hug and not a disturbance. i promise i’m not here to stir anything or bring any heaviness—i just really, truly wanted to greet you the happiest birthday ever.</p>
-      <p>i know i’ve made mistakes. i know i may not be the kind of friend you deserve. and maybe there’s still a part of you that feels hurt because of me and that’s okay. you don’t have to rush yourself or forgive me if you’re not ready. your feelings are valid. you’re allowed to feel them, completely and without question.</p>
-      <p>but even with all that said, i just couldn’t let your birthday pass without saying something (there are things i’ve been carrying in my heart that i just want you to know). because riko... thank you. thank you for everything. for being part of my life, even if it was only for a chapter, it was a chapter that mattered a lot.</p>
-      <p>being your friend was one of the most special, comforting, and joy-filled things i’ve ever experienced. thank you for laughing with me, listening to me, and just existing next to me in this strange little world. meeting you was such a magical thing. you might not even realize it, but you were one of the brightest parts of my life.. and i miss it. i miss you.</p>
-      <p>thank you for making me laugh during days when i didn’t even want to wake up. thank you for staying, even when i wasn’t at my best. you don’t know this, but you were one of the reasons i made it through. you were one of the reasons i’m still here. you reminded me that life could still be soft and beautiful. you made me want to try again. to live again.</p>
-      <p>i’m so proud of you. you’re no longer bending yourself just to please everyone—and that makes me so happy. you’re choosing your peace, and i hope it leads you somewhere full of warmth and sunshine and quiet happiness. you’ve always deserved that kind of life, riko. you really have.</p>
-      <p>and if ever, one day, the world starts to feel too loud again—if you ever feel like you’ve run out of people who are on your side—please know that i’m still here. quietly. always rooting for you from afar. you still have me. and even if we're not close anymore, you’ll always have a soft place to return to with me. no questions asked.</p>
-      <p>i regret what i did. so much. it was just one joke—but it hurt you, and i didn’t mean for that to happen. if i could turn back time, i would. i would’ve chosen my words better. i would’ve protected your heart instead of carelessly breaking it. i’m so sorry, riko. i never wanted to hurt you—not even for a second.</p>
-      <p>i still love you. as a friend, as a person who once knew your laughter and your quiet thoughts and your kindness. i’ll always treasure that. and i’ll always be here—silent, steady, and ready to welcome you back, if ever that day comes.</p>
-      <p>happy birthday, riko. may this new year of your life be kind, magical, and full of love you don’t have to question.</p>
-      <p>with all the love my heart can hold,<br>nyca lynne.</p>
-    </div>
-    <img src="https://i.pinimg.com/originals/66/99/b4/6699b4d7469e9eac3ce5d8ac27460f58.png" alt="my melody" class="melody">
+    <img class="my-melody" src="https://i.ibb.co/qJ3Mmsz/mymelody.png" alt="my melody">
+    <h2 class="typing">dear riko,</h2>
+    <button class="btn" onclick="toggleLetter()">click to open your letter</button>
+    <div id="letter">
+      <p>hi hi. i hope this little letter feels like a warm hug and not a disturbance. i promise i’m not here to stir anything or bring any heaviness—i just really, truly wanted to greet you the happiest birthday ever.</p><p>i know i’ve made mistakes. i know i may not be the kind of friend you deserve. and maybe there’s still a part of you that feels hurt because of me and that’s okay. you don’t have to rush yourself or forgive me if you’re not ready. your feelings are valid. you’re allowed to feel them, completely and without question.</p>
+
+  <p>but even with all that said, i just couldn’t let your birthday pass without saying something (there are things i’ve been carrying in my heart that i just want you to know). because riko... thank you. thank you for everything. for being part of my life, even if it was only for a chapter, it was a chapter that mattered a lot. being your friend was one of the most special, comforting, and joy-filled things i’ve ever experienced. thank you for laughing with me, listening to me, and just existing next to me in this strange little world. meeting you was such a magical thing. you might not even realize it, but you were one of the brightest parts of my life.. and i miss it. i miss you.</p>
+
+  <p>thank you for making me laugh during days when i didn’t even want to wake up. thank you for staying, even when i wasn’t at my best. you don’t know this, but you were one of the reasons i made it through. you were one of the reasons i’m still here. you reminded me that life could still be soft and beautiful. you made me want to try again. to live again. and that means more than words could ever say.</p>
+
+  <p>i’m so proud of you. you’re no longer bending yourself just to please everyone—and that makes me so happy. you’re choosing your peace, and i hope it leads you somewhere full of warmth and sunshine and quiet happiness. you’ve always deserved that kind of life, riko. you really have.</p>
+
+  <p>and if ever, one day, the world starts to feel too loud again—if you ever feel like you’ve run out of people who are on your side—please know that i’m still here. quietly. always rooting for you from afar. you still have me. and even if we're not close anymore, you’ll always have a soft place to return to with me. no questions asked.</p>
+
+  <p>i regret what i did. so much. it was just one joke—but it hurt you, and i didn’t mean for that to happen. if i could turn back time, i would. i would’ve chosen my words better. i would’ve protected your heart instead of carelessly breaking it. i’m so sorry, riko. i never wanted to hurt you—not even for a second.</p>
+
+  <p>i still love you. as a friend, as a person who once knew your laughter and your quiet thoughts and your kindness. i’ll always treasure that. and i’ll always be here—silent, steady, and ready to welcome you back, if ever that day comes.</p>
+
+  <p>happy birthday, riko. may this new year of your life be kind, magical, and full of love you don’t have to question.</p>
+
+  <p>with all the love my heart can hold,<br>nyca lynne.</p>
+</div>
+
   </div>  <script>
-    function revealLetter() {
+    function toggleLetter() {
       const letter = document.getElementById('letter');
-      letter.classList.add('show');
-      setTimeout(() => {
-        letter.scrollTo({ top: 0, behavior: 'smooth' });
-      }, 200);
+      letter.classList.toggle('show');
     }
   </script></body>
 </html>
