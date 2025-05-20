@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>happy birthday, riko!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/pink-polka.png');
+      background-color: #ffd5ec;
+      color: #5c2a4d;
+      cursor: url('https://cur.cursors-4u.net/cursors/cur-9/cur849.cur'), auto;
+    }.container {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.my-melody {
+  width: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  border-right: 2px solid #5c2a4d;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.button {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background-color: #ffb6d5;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ff97c1;
+  transform: scale(1.05);
+}
+
+.letter {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 1s ease, opacity 1s ease;
+  white-space: pre-wrap;
+  margin-top: 20px;
+}
+
+.letter.reveal {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.section {
+  margin-bottom: 2em;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://i.pinimg.com/originals/1a/f2/43/1af243c9c3a374383b9be3f302fd80fa.png" alt="My Melody" class="my-melody">
+    <div class="typing">happy birthday, riko!</div>
+    <button class="button" onclick="revealLetter()">click me to read something soft</button>
+    <div class="letter" id="letter">
+      <div class="section">
+        dear riko,hi hi. i hope this little letter feels like a warm hug and not a disturbance. i promise i’m not here to stir anything or bring any heaviness—i just really, truly wanted to greet you the happiest birthday ever.
+  </div>
+  <div class="section">
+    i know i’ve made mistakes. i know i may not be the kind of friend you deserve. and maybe there’s still a part of you that feels hurt because of me and that’s okay. you don’t have to rush yourself or forgive me if you’re not ready. your feelings are valid. you’re allowed to feel them, completely and without question.
+  </div>
+  <div class="section">
+    but even with all that said, i just couldn’t let your birthday pass without saying something (there are things i’ve been carrying in my heart that i just want you to know). because riko... thank you. thank you for everything. for being part of my life, even if it was only for a chapter, it was a chapter that mattered a lot. being your friend was one of the most special, comforting, and joy-filled things i’ve ever experienced. thank you for laughing with me, listening to me, and just existing next to me in this strange little world. meeting you was such a magical thing. you might not even realize it, but you were one of the brightest parts of my life.. and i miss it. i miss you.
+  </div>
+  <div class="section">
+    thank you for making me laugh during days when i didn’t even want to wake up. thank you for staying, even when i wasn’t at my best. you don’t know this, but you were one of the reasons i made it through. you were one of the reasons i’m still here. you reminded me that life could still be soft and beautiful. you made me want to try again. to live again. and that means more than words could ever say.
+  </div>
+  <div class="section">
+    i’m so proud of you. you’re no longer bending yourself just to please everyone—and that makes me so happy. you’re choosing your peace, and i hope it leads you somewhere full of warmth and sunshine and quiet happiness. you’ve always deserved that kind of life, riko. you really have.
+  </div>
+  <div class="section">
+    and if ever, one day, the world starts to feel too loud again—if you ever feel like you’ve run out of people who are on your side—please know that i’m still here. quietly. always rooting for you from afar. you still have me. and even if we're not close anymore, you’ll always have a soft place to return to with me. no questions asked.
+  </div>
+  <div class="section">
+    i regret what i did. so much. it was just one joke—but it hurt you, and i didn’t mean for that to happen. if i could turn back time, i would. i would’ve chosen my words better. i would’ve protected your heart instead of carelessly breaking it. i’m so sorry, riko. i never wanted to hurt you—not even for a second.
+  </div>
+  <div class="section">
+    i still love you. as a friend, as a person who once knew your laughter and your quiet thoughts and your kindness. i’ll always treasure that. and i’ll always be here—silent, steady, and ready to welcome you back, if ever that day comes.
+
+    happy birthday, riko. may this new year of your life be kind, magical, and full of love you don’t have to question.
+
+    with all the love my heart can hold,
+    nyca lynne.
+  </div>
+</div>
+
+  </div>
+  <script>
+    function revealLetter() {
+      document.getElementById("letter").classList.add("reveal");
+    }
+  </script>
+</body>
+</html>
