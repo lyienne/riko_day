@@ -6,83 +6,137 @@
   <style>
     body {
       margin: 0;
+      padding: 0;
+      background: url('https://i.imgur.com/4AI8nTz.png'); /* soft pink pattern */
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      background-color: #ffe6f0;
-      background-image: url('https://www.transparenttextures.com/patterns/connected.png');
-      color: #ff66a3;
-      overflow-x: hidden;
-    }
-    .container {
-      max-width: 800px;
-      margin: 100px auto;
-      padding: 30px;
-      background: #fff0f5;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
-      position: relative;
-      z-index: 1;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2.5em;
-      color: #ff99cc;
-    }
-    p {
-      font-size: 1.1em;
-      line-height: 1.8em;
-      white-space: pre-line;
-    }
-    .sparkle {
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      background: url('https://i.ibb.co/wCz6kY9/sparkle.png') no-repeat center/cover;
-      pointer-events: none;
-      animation: sparkleMove 1s linear infinite;
-    }
-    @keyframes sparkleMove {
-      0% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(1.5); opacity: 0; }
-    }
-    .button-container {
-      text-align: center;
-      margin-top: 30px;
-    }
-    button {
-      background-color: #ffb6c1;
-      border: none;
-      color: white;
-      padding: 12px 24px;
-      font-size: 1em;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-    button:hover {
-      transform: scale(1.1);
-      background-color: #ff69b4;
-    }
-    .hidden-text {
-      display: none;
-      margin-top: 20px;
-      animation: fadeIn 1s ease-in-out forwards;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .gif {
-      display: block;
-      margin: 20px auto;
-      width: 100px;
-      height: auto;
-    }
+      color: #4c2c2c;
+      overflow: hidden;
+    }.container {
+  max-width: 700px;
+  margin: 80px auto;
+  background-color: rgba(255, 240, 245, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 20px pink;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  text-align: center;
+  color: #ff69b4;
+  font-size: 2.2em;
+  animation: sparkleText 1.5s infinite alternate;
+}
+
+@keyframes sparkleText {
+  0% { text-shadow: 0 0 5px #ffb6c1; }
+  100% { text-shadow: 0 0 15px #ff69b4; }
+}
+
+#message {
+  white-space: pre-wrap;
+  font-size: 1em;
+}
+
+.button {
+  display: block;
+  margin: 20px auto;
+  background-color: #ffc0cb;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffb6c1;
+}
+
+#hiddenMessage {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  text-align: center;
+  font-weight: bold;
+  color: #d6336c;
+}
+
+#hiddenMessage.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gif-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gif-container img {
+  width: 150px;
+}
+
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: pink;
+  border-radius: 50%;
+  opacity: 0.6;
+  pointer-events: none;
+  animation: sparkleAnim 1s ease-out forwards;
+}
+
+@keyframes sparkleAnim {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.heart {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background: pink;
+  transform: rotate(45deg);
+  animation: floatUp 4s ease-in infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -7.5px;
+  left: 0;
+}
+
+.heart::after {
+  left: -7.5px;
+  top: 0;
+}
+
+@keyframes floatUp {
+  0% { bottom: -20px; opacity: 1; }
+  100% { bottom: 100%; opacity: 0; }
+}
+
   </style>
 </head>
-<body><div class="container">
+<body><div class="gif-container">
+  <img src="https://media.giphy.com/media/l0MYyGx8uKVyP4Rm0/giphy.gif" alt="My Melody">
+</div><div class="container">
   <h1>dear riko,</h1>
-  <p>
-hi hi. i hope this little letter feels like a warm hug and not a disturbance. i promise i’m not here to stir anything or bring any heaviness—i just really, truly wanted to greet you the happiest birthday ever.i know i’ve made mistakes. i know i may not be the kind of friend you deserve. and maybe there’s still a part of you that feels hurt because of me and that’s okay. you don’t have to rush yourself or forgive me if you’re not ready. your feelings are valid. you’re allowed to feel them, completely and without question.
+  <div id="message">
+    hi hi. i hope this little letter feels like a warm hug and not a disturbance. i promise i’m not here to stir anything or bring any heaviness—i just really, truly wanted to greet you the happiest birthday ever.i know i’ve made mistakes. i know i may not be the kind of friend you deserve. and maybe there’s still a part of you that feels hurt because of me and that’s okay. you don’t have to rush yourself or forgive me if you’re not ready. your feelings are valid. you’re allowed to feel them, completely and without question.
 
 but even with all that said, i just couldn’t let your birthday pass without saying something (there are things i’ve been carrying in my heart that i just want you to know). because riko... thank you. thank you for everything. for being part of my life, even if it was only for a chapter, it was a chapter that mattered a lot. being your friend was one of the most special, comforting, and joy-filled things i’ve ever experienced. thank you for laughing with me, listening to me, and just existing next to me in this strange little world. meeting you was such a magical thing. you might not even realize it, but you were one of the brightest parts of my life.. and i miss it. i miss you.
 
@@ -98,34 +152,36 @@ i still love you. as a friend, as a person who once knew your laughter and your 
 
 happy birthday, riko. may this new year of your life be kind, magical, and full of love you don’t have to question.
 
-with all the love my heart can hold, nyca lynne.
+with all the love my heart can hold,
+nyca lynne.
 
-  </p>
-  <img class="gif" src="https://media.tenor.com/JGq0mGPXbWAAAAAi/my-melody.gif" alt="My Melody">
-  <div class="button-container">
-    <button onclick="revealMessage()">click me, riko!</button>
-    <div id="extraMessage" class="hidden-text">
-      <p>you’re magical, and you always will be.</p>
-      <p>p.s. you still make the world brighter—just by being you.</p>
-    </div>
   </div>
-</div><script>
+  <button class="button" onclick="revealMessage()">click me!</button>
+  <div id="hiddenMessage">you are loved more than you know. always.</div>
+</div><audio id="clickSound" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+
+<script>
   function revealMessage() {
-    const message = document.getElementById('extraMessage');
-    message.style.display = 'block';
+    document.getElementById('hiddenMessage').classList.add('show');
+    document.getElementById('clickSound').play();
   }
 
-  // Sparkle effect
-  document.addEventListener('mousemove', function(e) {
+  document.addEventListener('mousemove', (e) => {
     const sparkle = document.createElement('div');
     sparkle.className = 'sparkle';
     sparkle.style.left = e.pageX + 'px';
     sparkle.style.top = e.pageY + 'px';
     document.body.appendChild(sparkle);
-
-    setTimeout(() => {
-      sparkle.remove();
-    }, 1000);
+    setTimeout(() => sparkle.remove(), 1000);
   });
+
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = Math.random() * window.innerWidth + 'px';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 4000);
+  }
+  setInterval(createHeart, 600);
 </script></body>
 </html>
