@@ -1,112 +1,140 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>happy birthday riko!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Riko!</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Comic Sans MS', cursive, sans-serif;
       background-color: #ffe6f0;
-      background-image: url('https://www.transparenttextures.com/patterns/food.png');
-      background-size: 100px 100px;
+      background-image: url('https://www.transparenttextures.com/patterns/connected.png');
+      color: #ff66a3;
       overflow-x: hidden;
     }
     .container {
-      max-width: 700px;
-      margin: 50px auto;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 20px;
+      max-width: 800px;
+      margin: 100px auto;
       padding: 30px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      background: #fff0f5;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
       position: relative;
+      z-index: 1;
     }
     h1 {
       text-align: center;
-      font-size: 2em;
-      color: #ff80aa;
-      animation: sparkle 2s infinite alternate;
-    }
-    @keyframes sparkle {
-      0% { text-shadow: 0 0 5px #ffcce5; }
-      100% { text-shadow: 0 0 15px #ffb3d9; }
+      font-size: 2.5em;
+      color: #ff99cc;
     }
     p {
-      font-size: 1em;
-      line-height: 1.7;
-      color: #444;
-      margin-bottom: 20px;
+      font-size: 1.1em;
+      line-height: 1.8em;
+      white-space: pre-line;
     }
-    .heart {
-      position: fixed;
-      width: 20px;
-      height: 20px;
-      background: url('https://i.ibb.co/8xLdfyz/heart.png') no-repeat center center / cover;
+    .sparkle {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: url('https://i.ibb.co/wCz6kY9/sparkle.png') no-repeat center/cover;
       pointer-events: none;
-      animation: float 4s linear infinite;
+      animation: sparkleMove 1s linear infinite;
     }
-    @keyframes float {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(-800px); opacity: 0; }
+    @keyframes sparkleMove {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.5); opacity: 0; }
     }
-    #message {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 1s ease;
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
     }
-    #message.show {
-      max-height: 3000px;
-    }
-    .reveal-button {
-      display: block;
-      margin: 30px auto 0;
-      padding: 12px 24px;
-      background-color: #ff99cc;
-      color: white;
-      font-size: 1em;
+    button {
+      background-color: #ffb6c1;
       border: none;
-      border-radius: 25px;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1em;
+      border-radius: 30px;
       cursor: pointer;
       transition: transform 0.3s ease, background-color 0.3s ease;
     }
-    .reveal-button:active {
-      transform: scale(0.95);
-      background-color: #ff66aa;
+    button:hover {
+      transform: scale(1.1);
+      background-color: #ff69b4;
+    }
+    .hidden-text {
+      display: none;
+      margin-top: 20px;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .gif {
+      display: block;
+      margin: 20px auto;
+      width: 100px;
+      height: auto;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>happy birthday, riko!</h1>
-    <button class="reveal-button" onclick="revealMessage()">click to open your letter</button>
-    <div id="message">
-      <p>dear riko,</p>
-      <p>hi hi. i hope this little letter feels like a warm hug and not a disturbance. i promise i’m not here to stir anything or bring any heaviness—i just really, truly wanted to greet you the happiest birthday ever.</p>
-      <p>i know i’ve made mistakes. i know i may not be the kind of friend you deserve. and maybe there’s still a part of you that feels hurt because of me and that’s okay. you don’t have to rush yourself or forgive me if you’re not ready. your feelings are valid. you’re allowed to feel them, completely and without question.</p>
-      <p>but even with all that said, i just couldn’t let your birthday pass without saying something (there are things i’ve been carrying in my heart that i just want you to know). because riko... thank you. thank you for everything. for being part of my life, even if it was only for a chapter, it was a chapter that mattered a lot.</p>
-      <p>being your friend was one of the most special, comforting, and joy-filled things i’ve ever experienced. thank you for laughing with me, listening to me, and just existing next to me in this strange little world. meeting you was such a magical thing. you might not even realize it, but you were one of the brightest parts of my life.. and i miss it. i miss you.</p>
-      <p>thank you for making me laugh during days when i didn’t even want to wake up. thank you for staying, even when i wasn’t at my best. you don’t know this, but you were one of the reasons i made it through. you were one of the reasons i’m still here. you reminded me that life could still be soft and beautiful. you made me want to try again. to live again. and that means more than words could ever say.</p>
-      <p>i’m so proud of you. you’re no longer bending yourself just to please everyone—and that makes me so happy. you’re choosing your peace, and i hope it leads you somewhere full of warmth and sunshine and quiet happiness. you’ve always deserved that kind of life, riko. you really have.</p>
-      <p>and if ever, one day, the world starts to feel too loud again—if you ever feel like you’ve run out of people who are on your side—please know that i’m still here. quietly. always rooting for you from afar. you still have me. and even if we're not close anymore, you’ll always have a soft place to return to with me. no questions asked.</p>
-      <p>i regret what i did. so much. it was just one joke—but it hurt you, and i didn’t mean for that to happen. if i could turn back time, i would. i would’ve chosen my words better. i would’ve protected your heart instead of carelessly breaking it. i’m so sorry, riko. i never wanted to hurt you—not even for a second.</p>
-      <p>i still love you. as a friend, as a person who once knew your laughter and your quiet thoughts and your kindness. i’ll always treasure that. and i’ll always be here—silent, steady, and ready to welcome you back, if ever that day comes.</p>
-      <p>happy birthday, riko. may this new year of your life be kind, magical, and full of love you don’t have to question.</p>
-      <p>with all the love my heart can hold,<br />nyca lynne.</p>
-    </div>
-  </div>  <script>
-    function revealMessage() {
-      const messageDiv = document.getElementById('message');
-      messageDiv.classList.toggle('show');
-    }
 
-    document.addEventListener('mousemove', function(e) {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.style.left = e.pageX + 'px';
-      heart.style.top = e.pageY + 'px';
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 4000);
-    });
-  </script></body>
+<div class="container">
+  <h1>dear riko,</h1>
+  <p>
+hi hi. i hope this little letter feels like a warm hug and not a disturbance. i promise i’m not here to stir anything or bring any heaviness—i just really, truly wanted to greet you the happiest birthday ever.
+
+i know i’ve made mistakes. i know i may not be the kind of friend you deserve. and maybe there’s still a part of you that feels hurt because of me and that’s okay. you don’t have to rush yourself or forgive me if you’re not ready. your feelings are valid. you’re allowed to feel them, completely and without question.
+
+but even with all that said, i just couldn’t let your birthday pass without saying something (there are things i’ve been carrying in my heart that i just want you to know). because riko... thank you. thank you for everything. for being part of my life, even if it was only for a chapter, it was a chapter that mattered a lot. being your friend was one of the most special, comforting, and joy-filled things i’ve ever experienced. thank you for laughing with me, listening to me, and just existing next to me in this strange little world. meeting you was such a magical thing. you might not even realize it, but you were one of the brightest parts of my life.. and i miss it. i miss you.
+
+thank you for making me laugh during days when i didn’t even want to wake up. thank you for staying, even when i wasn’t at my best. you don’t know this, but you were one of the reasons i made it through. you were one of the reasons i’m still here. you reminded me that life could still be soft and beautiful. you made me want to try again. to live again. and that means more than words could ever say.
+
+i’m so proud of you. you’re no longer bending yourself just to please everyone—and that makes me so happy. you’re choosing your peace, and i hope it leads you somewhere full of warmth and sunshine and quiet happiness. you’ve always deserved that kind of life, riko. you really have.
+
+and if ever, one day, the world starts to feel too loud again—if you ever feel like you’ve run out of people who are on your side—please know that i’m still here. quietly. always rooting for you from afar. you still have me. and even if we're not close anymore, you’ll always have a soft place to return to with me. no questions asked.
+
+i regret what i did. so much. it was just one joke—but it hurt you, and i didn’t mean for that to happen. if i could turn back time, i would. i would’ve chosen my words better. i would’ve protected your heart instead of carelessly breaking it. i’m so sorry, riko. i never wanted to hurt you—not even for a second.
+
+i still love you. as a friend, as a person who once knew your laughter and your quiet thoughts and your kindness. i’ll always treasure that. and i’ll always be here—silent, steady, and ready to welcome you back, if ever that day comes.
+
+happy birthday, riko. may this new year of your life be kind, magical, and full of love you don’t have to question.
+
+with all the love my heart can hold,
+nyca lynne.
+  </p>
+  <img class="gif" src="https://media.tenor.com/JGq0mGPXbWAAAAAi/my-melody.gif" alt="My Melody">
+  <div class="button-container">
+    <button onclick="revealMessage()">click me, riko!</button>
+    <div id="extraMessage" class="hidden-text">
+      <p>you’re magical, and you always will be.</p>
+      <p>p.s. you still make the world brighter—just by being you.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function revealMessage() {
+    const message = document.getElementById('extraMessage');
+    message.style.display = 'block';
+  }
+
+  // Sparkle effect
+  document.addEventListener('mousemove', function(e) {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.style.left = e.pageX + 'px';
+    sparkle.style.top = e.pageY + 'px';
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => {
+      sparkle.remove();
+    }, 1000);
+  });
+</script>
+
+</body>
 </html>
